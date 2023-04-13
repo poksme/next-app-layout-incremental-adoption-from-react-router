@@ -1,6 +1,7 @@
 'use client';
 
 import { Routes, Route, Outlet, Link } from 'react-router-dom';
+import NextLink from 'next/link';
 
 export default function App() {
   return (
@@ -42,7 +43,7 @@ function Layout() {
       <nav>
         <ul>
           <li className="text-white underline">
-            <a href="/">Home</a>
+            <NextLink href="/">Home</NextLink>
           </li>
           <li className="text-white underline">
             <Link to="/about">About</Link>
@@ -97,7 +98,7 @@ function NoMatch() {
     <div className="text-xl font-medium text-gray-500">
       <h2>Nothing to see here!</h2>
       <p className="text-white underline">
-        <a href="/">Go to the home page</a>
+        <NextLink href="/">Go to the home page</NextLink>
       </p>
     </div>
   );

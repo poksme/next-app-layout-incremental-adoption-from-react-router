@@ -5,6 +5,7 @@ import { demos as reactRouterDemos } from '#/lib/reactRouterDemos';
 import clsx from 'clsx';
 import { useSelectedLayoutSegments } from 'next/navigation';
 import { Link as ReactRouterLink, useLocation } from 'react-router-dom';
+import NextLink from 'next/link';
 
 export default function GlobalNav() {
   const [selectedLayoutSegments] = useSelectedLayoutSegments();
@@ -34,7 +35,7 @@ export default function GlobalNav() {
                       {item.name}
                     </div>
                   ) : (
-                    <a
+                    <NextLink
                       href={`/${item.slug}`}
                       className={clsx(
                         'block rounded-md px-3 py-2 text-sm font-medium hover:bg-gray-800 hover:text-gray-100',
@@ -42,7 +43,7 @@ export default function GlobalNav() {
                       )}
                     >
                       {item.name}
-                    </a>
+                    </NextLink>
                   )}
                 </div>
               );

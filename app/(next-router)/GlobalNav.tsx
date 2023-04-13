@@ -68,7 +68,7 @@ export default function GlobalNav() {
                       {item.name}
                     </div>
                   ) : (
-                    <a
+                    <NextLink
                       href={`/${item.slug}`}
                       className={clsx(
                         'block rounded-md px-3 py-2 text-sm font-medium hover:bg-gray-800 hover:text-gray-100',
@@ -76,7 +76,7 @@ export default function GlobalNav() {
                       )}
                     >
                       {item.name}
-                    </a>
+                    </NextLink>
                   )}
                 </div>
               );
